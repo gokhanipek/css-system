@@ -21,7 +21,7 @@
 
 <body>
 
-    <div class="container">
+    <div class="container" style="margin-top: 8rem">
         <h1 class="numbered-title"><span>00</span> Design system</h1>
         <div class="bg-accent text-dark" style="padding: 1rem">light blue bg, with dark text</div>
         <div class="bg-light text-dark" style="padding: 1rem">white bg, with dark text</div>
@@ -30,7 +30,7 @@
     </div>
 
 
-    <div class="container">
+    <div class="container" style="margin-top: 8rem">
         <h1 class="numbered-title"><span>01</span> Design System</h1>
         <section id="colors">
             <h2 class="text-light">colors</h2>
@@ -62,10 +62,10 @@
             </div>
         </section>
 
-        <section id="typography" style="margin: 4rem 0">
+        <section id="typography" style="margin: 8rem 0">
             <h2 class="numbered-title"><span>02</span> Typography </h2>
             <div class="flex">
-                <div class="flow" style="flex-basis: 100%; --flow-space: 1.2em">
+                <div class="container flow" style="flex-basis: 100%; --flow-space: 1.2em">
                     <div>
                         <p class="text-accent">Heading 1 - Bellefair Regular - 150px</p>
                         <p class="fs-900 ff-serif uppercase">EARTH</p>
@@ -87,7 +87,7 @@
                         <p class="text-accent fs-500 ff-sans-cond uppercase letter-spacing-1">SO, YOU WANT TO TRAVEL TO SPACE</p>
                     </div>
                 </div>
-                <div class="flow" style="flex-basis: 100%; --flow-space: 1.3rem">
+                <div class="container flow" style="flex-basis: 100%; --flow-space: 1.3rem">
                     <div>
                         <p class="text-accent">Subheading 1 - Bellefair Regular - 28px</p>
                         <p class="text-light fs-500 uppercase ff-serif letter-spacing-1">384,400 km</p>
@@ -112,8 +112,8 @@
             <h2 class="numbered-title"><span>03</span> Interactive Elements</h2>
 
             <!-- navigation -->
-            <div>
-                <nav>
+            <div class="container">
+                <nav >
                     <ul class="primary-navigation underline-indicators flex flex-center" style="--gap: 8em">
                         <li class="active"><a href="" class="text-light uppercase letter-spacing-2"><span>00</span> Active</a></li>
                         <li><a href="" class="text-light uppercase letter-spacing-2"><span>01</span>Hovered</a></li>
@@ -122,20 +122,47 @@
                 </nav>
             </div>
             <div class="flex">
-                <div style="margin-top: 5rem">
+                <div class="container" style="margin-top: 5rem">
                     <!--explore button-->
-                    <a href="#" class="large-button uppercase ff-serif fs-600 text-dark bg-light">Explore</a>
+                    <div>
+                        <a href="#" class="large-button uppercase ff-serif fs-600 text-dark bg-light">Explore</a>
+                    </div>
+                    <div style="margin-top: 5rem">
+                        <a href="#" class="large-button uppercase ff-serif fs-600 text-dark bg-light">Explore</a>
+                    </div>
 
                 </div>
-                <div style="margin-bottom: 50vh">
+                <div class="container" style="margin-bottom: 8rem">
                     <!--tabs-->
-                    <div class="tab-list underline-indicators flex">
-                        <button aria-selected="true" class="uppercase text-accent ff-sans-cond bg-dark letter-spacing-2">Moon</button>
-                        <button aria-selected="false" class="uppercase text-accent ff-sans-cond bg-dark letter-spacing-2">Mars</button>
-                        <button aria-selected="false" class="uppercase text-accent ff-sans-cond bg-dark letter-spacing-2">Europa</button>
+                    <div>
+                        <div class="tab-list underline-indicators flex">
+                            <button aria-selected="true" class="uppercase text-accent ff-sans-cond bg-dark letter-spacing-2">Moon</button>
+                            <button aria-selected="false" class="uppercase text-accent ff-sans-cond bg-dark letter-spacing-2">Mars</button>
+                            <button aria-selected="false" class="uppercase text-accent ff-sans-cond bg-dark letter-spacing-2">Europa</button>
+                        </div>
+                        <p class="text-accent" style="margin-top: 2rem;">Tabs(Active, Hover, Idle)</p>
                     </div>
                     <!--dots-->
+
+                    <div>
+                        <div class="dot-indicators flex" style="margin-top: 8rem;">
+                            <button aria-selected="true"><span class="sr-only"></span></button>
+                            <button aria-selected="false"><span class="sr-only"></span></button>
+                            <button aria-selected="false"><span class="sr-only"></span></button>
+                        </div>
+                        <p class="text-accent" style="margin-top: 2rem;">Slider 1 States (Active, Hover, Idle)</p>    
+                    </div>
+
                     <!--numbers-->
+
+                    <div>
+                        <div class="numbered-indicators flex flex-center" style="--flex-direction: column; margin-top: 5rem;">
+                            <button class="text-light ff-serif fs-500" aria-selected="true">1</button>
+                            <button class="text-light ff-serif fs-500" aria-selected="false">2</button>
+                            <button class="text-light ff-serif fs-500" aria-selected="false">3</button>
+                        </div>
+                        <p class="text-accent" style="margin-top: 2rem;">Slider 2 States (Active, Hover, Idle)</p>    
+                    </div>
                 </div>
             </div>
         </section>
