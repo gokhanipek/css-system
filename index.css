@@ -206,3 +206,84 @@ select {
     font-weight: 700;
     color: hsl(var(--clr-white) / .25)
 }
+
+.flex-center {
+    justify-content: center;
+    align-items: center;
+}
+
+/*components */
+
+.large-button {
+    position: relative;
+    display: grid;
+    place-items: center;
+    z-index: 1;
+    padding: 0 2em;
+    aspect-ratio: 1;
+    text-decoration: none;
+    border-radius: 50%;
+}
+
+.large-button::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: hsl( var(--clr-white) / .15);
+    opacity: 0;
+    transition: opacity 500ms linear, transform 750ms ease-in-out;
+}
+
+.large-button:hover::after,
+.large-button:focus::after {
+    transform: scale(1.5);
+    opacity: 1;
+}
+
+
+.primary-navigation {
+    --gap: 8rem;
+    --underline-gap: 2rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.primary-navigation a > span { 
+    margin-right: .5em;
+    font-weight: 700;
+}
+
+.primary-navigation a {
+    text-decoration: none;
+}
+
+.underline-indicators > * {
+    cursor: pointer;
+    display: grid;
+    place-content: center;
+    padding: var(--underline-gap, 1rem) 0;
+    border: 0;
+    border-bottom: 0.2rem solid hsl( var(--clr-white) / 0 );
+}
+
+.underline-indicators > *:hover,
+.underline-indicators > *:focus {
+    border-bottom: 0.2rem solid hsl( var(--clr-white) / .25);
+}
+
+.underline-indicators > .active {
+    border-bottom: 0.2rem solid hsl( var(--clr-white) / 1 );
+}
+
+.underline-indicators > [aria-selected="true"] {
+    color: 0.2rem solid hsl( var(--clr-white) / 1 );
+    border-bottom: 0.2rem solid hsl( var(--clr-white) / 1 );
+}
+
+.tab-list {
+     --gap: 2rem;
+}
